@@ -41,12 +41,12 @@ button.addEventListener("click",function(){
     main.style.display = "none";
     gsap.to(".cntr-p", {
       onStart: function() {
-        $(".cntr-p").scramble(10000, 100, "alphabet", true);
+        $(".cntr-p").scramble(4000, 40, "alphabet", true);
       },
-      repeat: -1, // This makes the animation repeat infinitely
-      yoyo: true, // This makes the animation reverse after each repeat (optional)
-      duration: 4, // Duration of each repeat cycle (you can adjust this as needed)
-      ease: "none" // Set easing function (optional, "none" makes it linear)
+      repeat: -1,
+      yoyo: true, 
+      duration: 4, 
+      ease: "none"
     });
 })
 
@@ -74,10 +74,11 @@ document.addEventListener('mousemove', (event) => {
     }, 1000); 
 });
 
+
+}
 butterfly()
 
 
-}
 
 function page2Animation(){
   var tl = gsap.timeline({
@@ -276,7 +277,7 @@ pagekAnimation()
 
 // Bhumi
 
-function Bhumi(){
+function sideScroller(){
   var crsr = document.querySelector('.crsr');
   var crsr2 = document.querySelector('.crsr2');
   var crsr3 = document.querySelector('.crsr3');
@@ -305,19 +306,26 @@ tl.to('.page5 .sideScroller',{
   
 })
 
-img.forEach((img)=>{
+
+
+img.forEach((img, index)=>{
   img.addEventListener('mousemove',(e)=>{
-      var rect = img.getBoundingClientRect();
-      var imgSrc=e.target.src
+
+    var rect = img.getBoundingClientRect();
+    console.log("fired", e.offsetX, rect.left, e.offsetY)
      
-     var currentX = e.pageX - rect.left;
+      console.log(rect.left)
+      var imgSrc=e.target.src
+    //  console.log(document.body.scrollHeight,"❤️❤️")
+    var currentX = e.pageX - rect.left;
       var currentY = e.pageY - rect.top;
-      customCrsr.style.left= e.pageX + window.scrollX + 300 +'px';
-      customCrsr.style.top= e.pageY + 3*(window.scrollY)/4 + 140 +'px'
+     
+      customCrsr.style.left= e.offsetX + index*820 +'px';
+      customCrsr.style.top= e.pageY + (e.offsetX)/2 +'px'
     
-      crsr.style.backgroundImage=`url(${imgSrc})`
-  crsr2.style.backgroundImage=`url(${imgSrc})`
-  crsr3.style.backgroundImage=`url(${imgSrc})`
+        crsr.style.backgroundImage=`url(${imgSrc})`
+        crsr2.style.backgroundImage=`url(${imgSrc})`
+        crsr3.style.backgroundImage=`url(${imgSrc})`
 
   var x = currentX + 3 * crsr.getBoundingClientRect().height;
       var y = currentY + 5 * crsr.getBoundingClientRect().height;
@@ -353,7 +361,9 @@ imageDiv.forEach((imgDiv)=>{
 })
 
 }
-Bhumi()
+sideScroller()
+
+
 
 
 
