@@ -1,4 +1,4 @@
-
+ 
 @font-face {
     font-family: font1;
     src: url(AtypDisplayTRIAL-Bold-BF65727125c8d1d.otf);
@@ -127,7 +127,6 @@ nav{
 }
 .side-nav{
     display: flex;
-    /* background: red; */
     font-size: 1.5vw;
     position: relative;
 }
@@ -180,9 +179,9 @@ nav img{
     color: #fff;
 }
 
-body {
+/* body {
     overflow: hidden; 
-}
+} */
 
 .butterfly-cursor {
     position: absolute;
@@ -219,8 +218,7 @@ body {
 
 
 .main2{
-    width: 100%;
-    overflow: hidden;
+    width: 100vw;
     background: #151519;
     font-family: font3;
 }
@@ -269,7 +267,6 @@ body {
     flex-direction: column;
 }
 #line1{
-    /* width: 10vw; */
     height: 0.01vh;
     background: #A9ABB5;
     position: absolute;
@@ -279,7 +276,6 @@ body {
 }
 #line2{
     width: 0.006vw;
-    /* height: 0.1vh; */
     background: #A9ABB5;
     position: absolute;
     top: 14%;
@@ -287,7 +283,6 @@ body {
     transform: translate(-50%,0%);
 }
 #line3{
-    /* width: 10vw; */
     height: 0.01vh;
     background: #A9ABB5;
     position: absolute;
@@ -298,17 +293,14 @@ body {
 #page2-one{
     width: 100vw;
     height: 30%;
-    /* background: rgb(70, 31, 31); */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center
-    /* position: relative; */
 }
 #page2-one h5{
     font-size: 3.1vw;
-    /* text-transform: capitalize; */
     display: flex;
     align-items: end;
     color: #A9ABB5;
@@ -392,7 +384,6 @@ body {
     font-size: 4.6vw;
     font-weight: 400;
     mix-blend-mode: difference;
-    /* background: red; */
 }
 
 #pg2{
@@ -410,7 +401,6 @@ body {
     text-align: center;
     justify-content: center;
     flex-direction: column;
-    /* background: lightblue; */
     color: #A9ABB5;
     padding: 10vw;
     gap: 2vw;
@@ -426,8 +416,6 @@ body {
 #pg2 #pg-down2{
     width: 100%;
     height: 60%;
-    /* background: saddlebrown; */
-    /* padding-left: 60px; */
     overflow: hidden;
 }
 #pg-down2 #zoom2{
@@ -491,6 +479,10 @@ body {
 }
 
 @media (max-width: 600px) {
+    body{
+        cursor:default;
+        user-select: auto;
+    }
     .butterfly-cursor{
         display: none;
     }
@@ -499,7 +491,6 @@ body {
     }
     nav{
         width: 100vw;
-        overflow: hidden;
     }
     .side-nav h1{
         font-size: 4vw;
@@ -517,11 +508,8 @@ body {
     }
     .main2{
         width: 100vw;
-        overflow-x: hidden !important;
     }
-    .page1{
-        overflow: hidden;
-    }
+
     .page1 h1{
         font-size: 6vw;
     }
@@ -605,6 +593,9 @@ body {
 
 .pagek-head {
     display: none;
+    background: #000;
+    height: 15vh;
+    color: #fff;
 }
 
 .video{
@@ -669,7 +660,6 @@ body {
     }
 }
 
-/* Bhumi */
 .page5{
     width: 100vw;
     min-height: 100vh;
@@ -678,10 +668,18 @@ body {
     flex-direction: column;
     font-family: font1;
 }
+.page5-text {
+    height: 55vh;
+    width: 100%;        
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    color: white;    
+}
 .page5-text h1{
     font-size: 5.5vw;
     font-family: font3;
-    /* font-weight: 100; */
 }
 .page5-text h5{
     font-weight: 100;
@@ -698,10 +696,14 @@ body {
 
 .sideScroller{
     position: relative;
-    /* background: black; */
-    /* background-color: red; */
+    
     background: #000;
     overflow: hidden;
+    height: 85vh;
+        width: 300vw;      
+        display: flex;     
+        align-items: center; 
+        gap: 10vw;   
     
 }
 .sideScroller::-webkit-scrollbar{
@@ -719,7 +721,6 @@ body::-webkit-scrollbar{
       flex-direction: column;
       background: #000;
       padding-top: 0vh;
-      /* padding-left: 10vw; */
     }
 
    .page5 .img {
@@ -734,11 +735,9 @@ body::-webkit-scrollbar{
       width: 14vw;
       height: 8vh;
       position: absolute;
-      background: red;
       left: 0%;
       top: 0%;
-      /* transform: translate(-50%, -50%); */
-      /* background-size: 250%; */
+
     }
 
     .crsr2 {
@@ -747,7 +746,6 @@ body::-webkit-scrollbar{
       position: absolute;
       top: 35%;
       left: 0%;
-      background: green;
     }
 
     .crsr3 {
@@ -756,7 +754,6 @@ body::-webkit-scrollbar{
       position: absolute;
       top: 33%;
       left: 29%;
-      background: rgb(28, 92, 188);
     }
 
     .crsrParent {
@@ -770,7 +767,6 @@ body::-webkit-scrollbar{
       border-radius: 0%;
       overflow: hidden;
       flex-wrap: wrap;
-      /* transition: transform 0.5s; */
     }
     .parent{
         flex-shrink: 0;
@@ -782,7 +778,9 @@ body::-webkit-scrollbar{
       z-index: 1000;
       top: 10vh;
       display: none;
-      background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7');
+      /* background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'); */
+      background-image: url(cursor.png);
+      background: transparent;
     }
 
     .imageDiv {
@@ -790,16 +788,23 @@ body::-webkit-scrollbar{
       overflow: hidden;
     }
 
+  
+
+
+      
+
     @media (max-width: 600px){
      .page5{
         display: none;
      }
     }
 
-/* footer part */
+
+
+    
+
 
 .footer{
-    /* height: 64vh; */
     padding-bottom: 50px;
     width: 100%;
     background-color: #DDDDDD;
@@ -813,7 +818,6 @@ body::-webkit-scrollbar{
     justify-content: space-between;
     background-color: #C1C1C1;
     padding: 0px 0px;
-    /* align-items: center; */
 }
 
 
@@ -884,7 +888,6 @@ body::-webkit-scrollbar{
 }
 .footer-bottom{
     display: flex;
-    /* background-color: red; */
     width: 100%;
     justify-content: space-between;
     
@@ -897,14 +900,12 @@ body::-webkit-scrollbar{
 .footer-bottom-right{
     width: 50%;
     gap: 140px;
-    /* padding: 0px 40px; */
     display: flex;
 
 }
 
 @media (max-width: 768px) {
     .footer{
-        /* height: 70vh; */
         padding-bottom: 20px;
         width: 100%;
         background-color: #DDDDDD;
@@ -1006,9 +1007,8 @@ body::-webkit-scrollbar{
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 600px) {
     .footer{
-        /* height: 70vh; */
         padding-bottom: 20px;
         width: 100%;
         background-color: #DDDDDD;
@@ -1042,17 +1042,14 @@ body::-webkit-scrollbar{
     .footer-bottom{
         width: 100%;
         display: flex;
-        /* gap: 30px; */
         flex-direction: column;
     }   
     .footer-bottom-left{
         width: 100%;
-        /* background-color: red; */
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 40px;
-        /* justify-content: space-evenly; */
     }
     .footer-bottom-right{
         flex-direction: column;
@@ -1110,4 +1107,7 @@ body::-webkit-scrollbar{
         width: 100%;
         margin: 5px 0px;
     }
-}
+} 
+
+
+                  

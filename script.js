@@ -216,9 +216,7 @@ function page3Animation(){
   height:"100%",
   borderRadius:"5px"
  })
- tl.to("#page4",{
-  y:"-40%"
- })
+
 }
 page3Animation()
 
@@ -312,9 +310,9 @@ img.forEach((img, index)=>{
   img.addEventListener('mousemove',(e)=>{
 
     var rect = img.getBoundingClientRect();
-    console.log("fired", e.offsetX, rect.left, e.offsetY)
+    // console.log("fired", e.offsetX, rect.left, e.offsetY)
      
-      console.log(rect.left)
+      // console.log(rect.left)
       var imgSrc=e.target.src
     //  console.log(document.body.scrollHeight,"❤️❤️")
     var currentX = e.pageX - rect.left;
