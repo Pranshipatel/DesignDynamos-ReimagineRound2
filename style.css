@@ -587,7 +587,7 @@ nav img{
     justify-content: center;
     z-index: -999;
     position: relative; 
-    margin-top: -30vh;
+  
     z-index: 99;
 }
 
@@ -667,9 +667,11 @@ nav img{
     align-items: center;
     flex-direction: column;
     font-family: font1;
+    margin-top: -35vh;
 }
 .page5-text {
     height: 55vh;
+
     width: 100%;        
     display: flex;
     align-items: center;

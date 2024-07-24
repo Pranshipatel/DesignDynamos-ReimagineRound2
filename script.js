@@ -204,9 +204,8 @@ function page3Animation(){
   scrollTrigger:{
     trigger:"#page3",
     scroller:".main2",
-    start:"1% 0%",
-    // markers:true,
-    end:"top -50%",
+    start:"-5% 0%",
+    end:"top -20%",
     pin:true,
     scrub:true
   }
@@ -216,6 +215,10 @@ function page3Animation(){
   height:"100%",
   borderRadius:"5px"
  })
+ tl.to(".pagek",{
+  y:"-26%"
+ })
+ 
 
 }
 page3Animation()
@@ -376,6 +379,19 @@ document.querySelector(".footer-top").addEventListener("mouseleave", function(){
   gsap.to(".footer-top",{
       y:0,
   })
+})
+
+var tl = gsap.timeline({
+  scrollTrigger:{
+    trigger:".page5",
+    scroller:".main2",
+    start:"2% 0%",
+    end:"top 0",
+    scrub:true
+  }
+})
+tl.to("nav",{
+  display:"none"
 })
 }
 
